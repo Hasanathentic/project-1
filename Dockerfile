@@ -1,6 +1,4 @@
-FROM nginx
-WORKDIR /usr/local/nginx/htdocs/
-ENV PATH=/usr/local/nginx/htdocs:$PATH
-COPY . /usr/local/nginx/htdocs/
+FROM httpd:2.4
+WORKDIR /usr/local/apache2/htdocs/
+COPY . /project-1/*/usr/local/apache2/htdocs/
 EXPOSE 8080
-CMD ["nginx"]
