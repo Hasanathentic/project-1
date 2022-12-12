@@ -23,7 +23,7 @@ pipeline {
         stage('kubectl deploy'){ 
        steps
         {
-          sh 'sudo kubectl apply -f nginx.yaml'
+          sh 'sudo kubectl apply -f httpd'
           sh 'sudo kubectl get nodes'
                    
         }
