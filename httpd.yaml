@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: httpd-deployment
-  namespace: hello
   labels:
     app: httpd
 spec:
@@ -27,7 +26,6 @@ kind: Service
 apiVersion: v1
 metadata:
   name: httpd-service
-  namespace: hello
 spec:
   type: LoadBalancer
   selector:
@@ -56,6 +54,5 @@ spec:
           backend:
             service:
               name: httpd-service
-              namespace: hello
               port:
                 number: 80
