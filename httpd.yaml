@@ -27,6 +27,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: httpd-service
+  namespace: hello
 spec:
   type: LoadBalancer
   selector:
@@ -50,10 +51,11 @@ spec:
   rules:
     - http:
         paths:
-        - path: /
+        - path: /*
           pathType: Prefix
           backend:
             service:
               name: httpd-service
+              namespace: hello
               port:
                 number: 80
