@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: httpd-deployment
+  name: httpd
   labels:
     app: httpd
 spec:
@@ -16,7 +16,7 @@ spec:
         app: httpd
     spec:
       containers:
-      - name: httpd-container
+      - name: httpd
         image: public.ecr.aws/c9e0d4u8/httpd:2.4
         ports:
         - containerPort: 80
