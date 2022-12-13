@@ -21,8 +21,7 @@ pipeline {
         }
       
         stage('kubectl deploy'){ 
-       steps
-        {
+       steps {
           sh 'kubectl apply -f httpd.yaml'
           sh 'kubectl get nodes'
                    
