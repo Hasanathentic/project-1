@@ -46,7 +46,7 @@ spec:
       paths:
       - backend:
           service:
-            name: httpd-service
+            name: httpd
             port:
               number: 80
         path: /
