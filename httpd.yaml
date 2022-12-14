@@ -54,7 +54,9 @@ spec:
           - path: /*
             pathType: prefix
             backend:
-              serviceName: httpd-service
-              servicePort: 80
+              service:
+                name: httpd-service
+                Port:
+                 number: 80
 
 
