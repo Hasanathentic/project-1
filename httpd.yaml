@@ -42,13 +42,13 @@ metadata:
   name: ingress-httpd
   namespace: 
   annotations:
-    kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
   labels:
     app: httpd
 spec:
-  rules:
+   ingressClassName: alb
+   rules:
     - http:
         paths:
           - path: /*
