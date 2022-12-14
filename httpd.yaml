@@ -47,16 +47,16 @@ metadata:
   labels:
     app: httpd
 spec:
-   ingressClassName: alb
-   rules:
+  ingressClassName: alb
+  rules:
     - http:
         paths:
-          - path: /*
-            pathType: prefix
-            backend:
-              service:
-                name: httpd-service
-                Port:
-                 number: 80
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: httpd-service
+              port:
+                number: 80
 
 
